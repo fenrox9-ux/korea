@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Auto — Import Cars From South Korea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <span class="logo-badge">KA</span>
+      <span class="logo-text">Korea<span class="accent"> Auto</span></span>
+    </a>
+
+    <nav class="nav-desktop" id="navDesktop">
+      <a href="#home">Home</a>
+      <a href="#cars">Cars</a>
+      <a href="#brands">Brands</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#about-us">About Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary cta-desktop">Import a Car</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="display:none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#home">Home</a>
+    <a href="#cars">Cars</a>
+    <a href="#brands">Brands</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#about-us">About Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="text-align:center;margin-top:.5rem;">Import a Car</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1645492693393-7c92e2ae4af9?w=1800&h=1200&fit=crop&auto=format" alt="Modern Korean car">
+    <div class="hero-gradient-1"></div>
+    <div class="hero-gradient-2"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Korean Cars • Direct Import</span>
+      </div>
+      <h1 class="hero-title">Your Dream<br><span class="accent">Car</span> From<br>Korea</h1>
+      <p class="hero-desc">We help you find and import quality cars from South Korea with a simple and transparent process. No middlemen, no surprises.</p>
+      <div class="hero-actions">
+        <a href="#cars" class="btn btn-primary">Browse Cars</a>
+        <a href="#contact" class="btn btn-outline">Import Your Car</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value">500+</div><div class="stat-label">Cars Delivered</div></div>
+        <div class="stat"><div class="stat-value">7+</div><div class="stat-label">Years Experience</div></div>
+        <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Transparent</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARS ============ -->
+<section id="cars" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Inventory</span></div>
+        <h2 class="section-title">Available Cars</h2>
+      </div>
+    </div>
+
+    <div class="filters" id="filters">
+      <div class="filter-group" data-filter="brand">
+        <span class="filter-label">Brand:</span>
+        <div class="filter-options"></div>
+      </div>
+      <div class="filter-group" data-filter="body">
+        <span class="filter-label">Body:</span>
+        <div class="filter-options"></div>
+      </div>
+      <div class="filter-group" data-filter="fuel">
+        <span class="filter-label">Fuel:</span>
+        <div class="filter-options"></div>
+      </div>
+    </div>
+
+    <div class="car-grid" id="carGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">No cars match your filters.</div>
+  </div>
+</section>
+
+<!-- ============ FEATURED / BRANDS ============ -->
+<section id="brands" class="section section-alt">
+  <div class="container">
+    <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Editor's Pick</span></div>
+    <h2 class="section-title">Popular From Korea</h2>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works" class="section">
+  <div class="container">
+    <div class="section-intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Simple Process</span></div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Four straightforward steps from selection to delivery — we handle the complexity so you don't have to.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803 7.5 7.5 0 0016.803 15.803z"/></svg></div>
+        <div class="step-num">01</div>
+        <h3 class="step-title">Choose Your Car</h3>
+        <p class="step-desc">Browse our catalog or tell us your preferences. We find your perfect Korean car.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="step-num">02</div>
+        <h3 class="step-title">We Check the Car</h3>
+        <p class="step-desc">Our experts inspect every vehicle at source. Full condition and history report provided.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg></div>
+        <div class="step-num">03</div>
+        <h3 class="step-title">Shipping From Korea</h3>
+        <p class="step-desc">We handle all logistics, customs clearance, and international shipping paperwork.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg></div>
+        <div class="step-num">04</div>
+        <h3 class="step-title">Delivery to You</h3>
+        <p class="step-desc">Your car arrives ready to drive. We assist with registration and local documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / WHY ============ -->
+<section id="about-us" class="section section-alt">
+  <div class="container about-grid">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Advantage</span></div>
+      <h2 class="section-title">Why Korea Auto?</h2>
+      <p class="about-desc">With over seven years importing vehicles directly from South Korea, we've built trusted relationships with dealers, auction houses, and logistics partners across the country. Every car we source gets the same rigorous attention.</p>
+      <a href="#contact" class="btn btn-primary">Get Started
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-bar"></div><h3>Direct Market Access</h3><p>We source directly from Korean dealers and auctions, cutting out middlemen.</p></div>
+      <div class="why-card"><div class="why-bar"></div><h3>Expert Inspection</h3><p>Every vehicle is inspected by certified technicians before shipping.</p></div>
+      <div class="why-card"><div class="why-bar"></div><h3>Transparent Pricing</h3><p>No hidden fees. Full cost breakdown from car price to delivery.</p></div>
+      <div class="why-card"><div class="why-bar"></div><h3>End-to-End Shipping</h3><p>We handle all logistics from port of origin to your location.</p></div>
+      <div class="why-card"><div class="why-bar"></div><h3>Documentation Support</h3><p>Complete assistance with customs, import duty, and registration.</p></div>
+      <div class="why-card"><div class="why-bar"></div><h3>7+ Years Experience</h3><p>Hundreds of successful deliveries across 30+ countries worldwide.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="section">
+  <div class="container">
+    <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Testimonials</span></div>
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Gallery</span></div>
+    <h2 class="section-title">Our Cars &amp; Showroom</h2>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Get In Touch</span></div>
+      <h2 class="section-title">Find Your Next Car</h2>
+      <p class="about-desc">Tell us what you're looking for and we'll find it for you in the Korean market. Our team responds within 24 hours.</p>
+      <div class="contact-info">
+        <div class="contact-item"><span>📍</span><span>Seoul, South Korea &amp; Worldwide Delivery</span></div>
+        <div class="contact-item"><span>📧</span><span>info@koreaauto.com</span></div>
+        <div class="contact-item"><span>📞</span><span>+82 2 1234 5678</span></div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="fName">Full Name</label>
+            <input type="text" id="fName" name="name" placeholder="John Doe" required>
+            <span class="error-msg" id="errName"></span>
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+1 234 567 8900" required>
+            <span class="error-msg" id="errPhone"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fModel">Car Model</label>
+            <input type="text" id="fModel" name="model" placeholder="e.g. Hyundai Tucson">
+          </div>
+          <div class="field">
+            <label for="fBudget">Budget</label>
+            <input type="text" id="fBudget" name="budget" placeholder="e.g. $25,000">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fMessage">Message</label>
+          <textarea id="fMessage" name="message" rows="4" placeholder="Tell us more about your ideal car — color, features, timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+      </form>
+
+      <div class="contact-success" id="contactSuccess" style="display:none;">
+        <div class="success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3>Request Sent!</h3>
+        <p>Our team will contact you within 24 hours.</p>
+        <button type="button" class="btn btn-outline" id="sendAnother" style="margin-top:1.25rem;">Send Another Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-badge">KA</span>
+          <span class="logo-text">Korea<span class="accent"> Auto</span></span>
+        </div>
+        <p>Premium Korean car imports. Trusted by customers in 30+ countries.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#cars">Cars</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Brands</h4>
+        <ul>
+          <li><span>Hyundai</span></li>
+          <li><span>Kia</span></li>
+          <li><span>Genesis</span></li>
+          <li><span>SsangYong</span></li>
+          <li><span>Chevrolet Korea</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram" class="social-btn"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" aria-label="Facebook" class="social-btn"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="social-btn"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Korea Auto. All rights reserved.</p>
+      <p>Premium Korean Car Imports · Seoul, South Korea</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CAR DETAILS MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="">
+      <span class="modal-brand-tag" id="modalBrand"></span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle"></h3>
+          <span id="modalYear" class="modal-year"></span>
+        </div>
+        <span id="modalPrice" class="modal-price"></span>
+      </div>
+      <div class="modal-specs" id="modalSpecs"></div>
+      <div class="modal-actions">
+        <a href="#contact" class="btn btn-primary btn-block" id="modalRequestBtn">Request This Car</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
